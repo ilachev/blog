@@ -15,7 +15,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{{ path('home') }}">
-        Logo
+        <img class="navbar-brand-full" src="/logo.png" width="90" height="25" alt="Logo">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>
@@ -24,6 +24,9 @@
 </header>
 <div class="app-body">
     <div class="sidebar">
+        <nav class="sidebar-nav">
+            {{ knp_menu_render('sidebar', {'currentClass': 'active'}) }}
+        </nav>
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
     </div>
     <main class="main">
